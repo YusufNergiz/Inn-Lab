@@ -1,0 +1,43 @@
+.mainText {
+    margin-block: 3rem;
+}
+
+.mainText > * {
+    font-family: var(--main-font-family);
+    color: var(--primary-color);
+    font-style: normal;
+    font-weight: 556;
+    font-size: 7rem;
+    line-height: 8.4rem;
+    text-align: center;
+}
+
+@media only screen and (max-width: 1000px) {
+    .mainText > * {
+        font-size: 5rem;
+    }
+}
+
+.researchButton {
+    width: 20rem;
+    height: 7rem;
+    background: #FFFFFF;
+    border-radius: 1.5rem;
+    font-family: var(--main-font-family);
+    font-style: normal;
+    font-weight: 656;
+    font-size: 2.4rem;
+    line-height: 2.9rem;
+    color: var(--purple-color);
+    border: none;
+}
+
+.progressBarContainer {
+    margin-block: 4rem;
+    background: linear-gradient(106.41deg, rgba(255, 255, 255, 0.4) 7.3%, rgba(255, 255, 255, 0.1) 100%);
+    box-shadow: 0rem 0.4rem 2.4rem -0.1rem rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(4rem);
+    border-radius: 1.5rem;
+    width: 100%;
+    height: 10rem;
+}

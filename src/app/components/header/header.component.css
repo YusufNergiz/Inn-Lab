@@ -1,0 +1,107 @@
+@media only screen and (max-width: 1000px) {
+    .logo {
+        display: none;
+    }
+}
+
+.navbar {
+    top: 0;
+    position: sticky;
+    margin-bottom: 10rem;
+}
+
+/* Navbar Logo Animation */
+
+@keyframes moveLeft {
+    0% {right: 1.5rem;}
+    10% {right: 2rem;}
+    25% {right: 3rem;}
+    50% {right: 4rem;}
+    75% {right: 5rem;}
+    100% {right: 6rem;}
+}
+
+@keyframes moveRight {
+    0% {left: 2rem;}
+    10% {left: 3rem;}
+    25% {left: 4rem;}
+    50% {left: 5rem;}
+    75% {left: 6rem;}
+    100% {left: 7rem;}
+}
+
+@keyframes shrinkDown {
+    0% {transform: scale(0.8); }
+    25% {transform: scale(0.6);}
+    50% {transform: scale(0.4);}
+    100% {opacity: 0; display: none;}
+}
+
+@keyframes enlarge {
+    0% {transform: scale(1.2);}
+    25% {transform: scale(1.3);}
+    50% {transform: scale(1.4);}
+    100% {transform: scale(1.5);}
+}
+
+.navbar-links-move-right {
+    position: relative;
+    animation-duration: 2s;
+    animation: moveRight 1.0s forwards;
+}
+
+.navbar-brand-enlarge {
+    position: relative;
+    animation-duration: 2s;
+    animation: enlarge 1.0s forwards;
+}
+
+.navbar-brand-shrink-down {
+    position: relative;
+    animation-duration: 2s;
+    animation: shrinkDown 1.0s forwards;
+}
+
+.navbar-brand-move-left {
+    position: relative;
+    animation-timing-function: ease-out;
+    animation-duration: 2s;
+    animation: moveLeft 1.0s forwards;
+}
+
+/*  */
+
+.navbar-brand > *{
+    margin-inline: 0.5rem;
+}
+
+.logo1 {
+    position: relative;
+    opacity: 1;
+}
+
+.navbar {
+    padding-block: 3rem;
+}
+
+.navbar-nav {
+    width: 49.4rem;
+    height: 7rem;
+    background: linear-gradient(106.41deg, rgba(255, 255, 255, 0.4) 7.3%, rgba(255, 255, 255, 0.1) 100%);
+    box-shadow: 0rem 0.4rem 2.4rem -0.1rem rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(4rem);
+    border-radius: 1.5rem;
+    padding: 2rem;
+}
+
+.nav-link {
+    font-family: var(--main-font-family);
+    color: var(--primary-color);
+    font-style: normal;
+    font-weight: 350;
+    font-size: 2rem;
+    line-height: 2.4rem;
+    width: 5.2rem;
+    height: 2.4rem;
+    margin-inline: 1.5rem;
+}

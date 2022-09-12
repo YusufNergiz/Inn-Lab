@@ -1,1 +1,21 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+    --main-font-family: 'SF Compact', sans-serif;
+    --primary-color: #FFFFFF;
+    --secondary-color: #363131;
+    --purple-color: #AE6EAA;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background: linear-gradient(90deg,#4f627d,#9e679b);
+}
+
+.centerItemsInside {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}

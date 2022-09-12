@@ -1,0 +1,43 @@
+<nav class="navbar navbar-dark navbar-expand-lg">
+    <div class="navbar-brand ms-md-5 ms-2" [ngClass]="{'navbar-brand-move-left' : scrolled}">
+        <svg xmlns="http://www.w3.org/2000/svg" width="65" height="47" viewBox="0 0 65 47" fill="none" class="logo logo1" [ngClass]="{'navbar-brand-shrink-down' : scrolled}">
+            <path d="M0 0H7.38005V46.5753H0V0Z" fill="#EFF2F1"/>
+            <path d="M19.3242 12.8417V46.5753H12.679V0H21.938L29.5189 27.8792V0H36.0942V46.5753H28.5121L19.3242 12.8417Z" fill="#EFF2F1"/>
+            <path d="M47.9683 12.8417V46.5753H41.3269V0H50.5847L58.1656 27.8792V0H64.7409V46.5753H57.16L47.9683 12.8417Z" fill="#EFF2F1"/>
+            </svg>
+
+        <svg xmlns="http://www.w3.org/2000/svg" width="34" height="47" viewBox="0 0 34 47" fill="none" class="logo logo2" [ngClass]="{'navbar-brand-enlarge' : scrolled}">
+            <path d="M33.0971 0.00488281H26.5383L11.1794 46.5739H17.7382L33.0971 0.00488281Z" fill="#EFF2F1"/>
+            <path d="M21.9177 0H15.3589L0 46.569H6.55878L21.9177 0Z" fill="#EFF2F1"/>
+            <path d="M33.0985 32.9043L28.5879 46.5756H22.1384L26.6491 32.9043H33.0985Z" fill="#EFF2F1"/>
+            </svg>
+
+        <svg xmlns="http://www.w3.org/2000/svg" width="73" height="47" viewBox="0 0 73 47" fill="none" class="logo logo3" [ngClass]="{'navbar-brand-shrink-down' : scrolled}">
+            <path d="M0 0H7.3737V39.9219H19.5174V46.5753H0V0Z" fill="#EFF2F1"/>
+            <path d="M46.6274 46.5753H39.1812L37.9099 38.1251H28.8517L27.5804 46.5753H20.8042L28.3127 0H39.1189L46.6274 46.5753ZM29.7887 31.8042H36.9005L33.3408 8.25021L29.7887 31.8042Z" fill="#EFF2F1"/>
+            <path d="M72.2627 10.7123V12.3689C72.2627 17.1605 70.7867 20.2203 67.4991 21.7508C71.458 23.28 73.0001 26.8075 73.0001 31.7316V35.5241C73.0001 42.7102 69.1759 46.569 61.7972 46.569H50.1899V0H61.3268C68.9751 0 72.2627 3.52616 72.2627 10.7123ZM57.57 6.65344V18.9625H60.4546C63.2058 18.9625 64.8827 17.7659 64.8827 14.0396V11.4438C64.8827 8.11768 63.7385 6.65344 61.1259 6.65344H57.57ZM57.57 25.6159V39.9219H61.7921C64.2737 39.9219 65.6162 38.7903 65.6162 35.3342V31.2715C65.6162 26.9476 64.2063 25.6159 60.8526 25.6159H57.57Z" fill="#EFF2F1"/>
+            </svg>  
+    </div>
+    <button class="navbar-toggler" type="button" (click)="navbarCollapsed = !navbarCollapsed" [attr.aria-expanded]="!navbarCollapsed" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent" [ngbCollapse]="navbarCollapsed">
+        <ul class="navbar-nav ms-auto me-lg-5" [ngClass]="{'navbar-links-move-right' : scrolled}">
+            <li class="nav-item">
+                <a href="#" class="nav-link">About</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">Work</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">Team</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">FAQs</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">Vacancies</a>
+            </li>
+        </ul>
+    </div>
+</nav>
