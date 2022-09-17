@@ -3,13 +3,72 @@
     <div class="container">
         <div class="mainText">
             <h1>Разработка восхитительных продуктов для</h1>
-            <ngx-sbz-type-delete [wordArray]="['ваших клиентов.', 'вашего бизнеса.', 'вашей компании.']" [fontSize]="mobile ? '50px' : '70px'" [textColor]="'white'" [blinkWidth]="'6px'" [typingSpeedMilliseconds]="100" [deleteSpeedMilliseconds]="150"></ngx-sbz-type-delete>
+            <ngx-sbz-type-delete [wordArray]="['ваших клиентов.', 'вашего бизнеса.', 'вашей компании.']" [fontSize]="fontSize" [textColor]="'white'" [blinkWidth]="'6px'" [typingSpeedMilliseconds]="100" [deleteSpeedMilliseconds]="150"></ngx-sbz-type-delete>
         </div>
         <br><br><br>
         <div class="centerItemsInside"><button class="researchButton">Исследовать</button></div>
         <div class="progressBarContainer">
-
+            <div class="step1">Idea</div>
+            <div class="line1"></div>
+            <div class="step2">Design</div>
+            <div class="line2"></div>
+            <div class="step3">Develop</div>
+            <div class="line3"></div>
+            <div class="step4">Launch</div>
         </div>
+
+        <div class="row g-5">
+            <div class="col-12 col-lg-12 mb-3">
+                <div class="global-div" style="width: 100%; height: 25.5rem;">
+                    <img src="assets\images\infinity.png" alt="Infinity Image">
+                    <h3>Безграничное творчество</h3>
+                    <br>
+                    <p>INN LAB - это креативная студия, которое занимается 
+                        созданием уникальных цифровых проектов. 
+                        Мы создаем индивидуальный цифровой дизайн, код и 
+                        форму брендов. Большой или маленький.</p>
+                </div>
+            </div>
+            <div class="col-12 col-lg-6 mt-5">
+                <div class="global-div" style="width: 100%; height: 25.5rem;">
+                    <img src="assets\images\diamond.png" alt="Diamond Image">
+                    <h3>Премиум качество</h3>
+                    <p>Творческая сила, которая выходит далеко 
+                        за рамки шаблонов. 
+                        Каждый пиксель тщательно проработан.</p>
+                </div>
+            </div>
+            <div class="col-12 col-lg-6 mt-5">
+                <div class="global-div" style="width: 100%; height: 25.5rem;">
+                    <img src="assets\images\flash.png" alt="Flash Image">
+                    <h3>Надежно и быстро</h3>
+                    <p>Получите свой сайт менее чем за 4 недели,
+                        гарантировано! </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="animatedTextContainer" #animatedTextContainer>
+            <h1 #text1 class="text1">В компаний INN LAB мы занимаемся разработкой</h1>
+            <h1 #text2 class="text2">IOS/Andorid приложений Landing сайтов</h1>
+            <h1 #text3 class="text3">Сложных и не сложных Web платформ</h1>
+        </div>
+
+        <div class="projects">
+            <app-projects></app-projects>
+        </div>
+
     </div>
 </div>
+<div class="team">
+    <app-team></app-team>
+</div>
+
+<div class="container">
+    <div class="faq mt-5">
+        <app-faq></app-faq>
+    </div>
+</div>
+
+<app-footer></app-footer>
 

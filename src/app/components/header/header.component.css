@@ -13,21 +13,21 @@
 /* Navbar Logo Animation */
 
 @keyframes moveLeft {
-    0% {right: 1.5rem;}
-    10% {right: 2rem;}
-    25% {right: 3rem;}
-    50% {right: 4rem;}
-    75% {right: 5rem;}
-    100% {right: 6rem;}
+    0% {transform: translateX(-10rem);}
+    10% {transform: translateX(-11rem);}
+    25% {transform: translateX(-12rem);}
+    50% {transform: translateX(-13rem);}
+    75% {transform: translateX(-14rem);}
+    100% {transform: translateX(-15rem);}
 }
 
 @keyframes moveRight {
-    0% {left: 2rem;}
-    10% {left: 3rem;}
-    25% {left: 4rem;}
-    50% {left: 5rem;}
-    75% {left: 6rem;}
-    100% {left: 7rem;}
+    0% {transform: translateX(5rem);}
+    10% {transform: translateX(6rem);}
+    25% {transform: translateX(7rem);}
+    50% {transform: translateX(8rem);}
+    75% {transform: translateX(9rem);}
+    100% {transform: translateX(10rem);}
 }
 
 @keyframes shrinkDown {
@@ -65,8 +65,8 @@
 .navbar-brand-move-left {
     position: relative;
     animation-timing-function: ease-out;
-    animation-duration: 2s;
-    animation: moveLeft 1.0s forwards;
+    animation-duration: 0.2s;
+    animation: moveLeft 0.2s forwards;
 }
 
 /*  */
@@ -82,14 +82,15 @@
 
 .navbar {
     padding-block: 3rem;
+    z-index: 2;
 }
 
 .navbar-nav {
     width: 49.4rem;
     height: 7rem;
-    background: linear-gradient(106.41deg, rgba(255, 255, 255, 0.4) 7.3%, rgba(255, 255, 255, 0.1) 100%);
-    box-shadow: 0rem 0.4rem 2.4rem -0.1rem rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(4rem);
+    background: var(--main-div-background);
+    box-shadow: var(--main-div-box-shadow);
+    backdrop-filter: var(--main-backdrop-filter);
     border-radius: 1.5rem;
     padding: 2rem;
 }
@@ -105,3 +106,28 @@
     height: 2.4rem;
     margin-inline: 1.5rem;
 }
+
+@media only screen and (max-width: 1000px) {
+ .navbar-links-move-right {
+    animation: none;
+ }   
+ .navbar-brand-enlarge {
+    animation: none;
+ }
+ .navbar-brand-shrink-down {
+    animation: none;
+ }
+ .navbar-brand-move-left {
+    animation: none;
+ }
+
+ .navbar-nav {
+    width: 100%;
+    height: fit-content;
+ }
+
+ .navbar-nav > * {
+    padding-block: 1rem;
+ }
+}
+

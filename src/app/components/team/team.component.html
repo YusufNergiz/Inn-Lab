@@ -1,0 +1,25 @@
+<div class="team" #team>
+    <div class="row">
+        <div class="col-3"><div class="titleLine"></div></div>
+        <div class="col-6">
+            <div class="titleText">НАША КОМАНДА</div>
+        </div>
+        <div class="col-3"><div class="titleLine"></div></div>
+    </div>
+    
+    <div class="teamWrapper snaps-inline" #teamWrapper>
+        <div class="card" *ngFor="let member of teamMembers">
+            <div class="card-profile" [ngStyle]="{'background-image': 'url(' + member.profile + ')'}">
+            </div>
+            <h3>{{member.name}}</h3>
+            <p>{{member.position}}</p>
+            <p>{{member.description}}</p>
+
+            <div class="card-contact">
+                <a href="{{member.linkedin}}" target="_blank"><img src="assets\images\linkedin.png" alt="Linkedin Logo"></a>
+                <a href="{{member.linkedin}}" target="_blank"><img src="assets\images\instagram.png" alt="Linkedin Logo"></a>
+            </div>
+        </div>
+    </div>
+    
+</div>

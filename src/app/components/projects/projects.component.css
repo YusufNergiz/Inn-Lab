@@ -1,0 +1,197 @@
+/* Projects */
+
+.logoImageOnMobile {
+    display: none;
+}
+
+.projectsContainer {
+    padding: 5rem;
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+}
+
+.projectsContainer > * {
+    margin-inline: 1rem;
+}
+
+.projectMainImage {
+    width: 100%;
+}
+
+.project {
+    flex: 0.5;
+    transition: 1s;
+    width: 77.4rem;
+    height: 57.5rem;
+    border-radius: 6rem;
+    position: relative;
+}
+
+.project1 {
+    flex: 5;
+    width: 77.4rem;
+    height: 57.5rem;
+    background: #FFFFFF;
+    border-radius: 6rem;
+    position: relative;
+    transition: 1s;
+}
+
+.projectSmall {
+    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+.projectWide {
+    animation: fadeIn 3s;
+    background-size: cover;
+}
+
+.projectLogo {
+    width: 12rem;
+    height: 12rem;
+    position: absolute;
+    bottom: 0rem;
+    padding: 3rem;
+}
+
+/* Hover Over Project To Change Project 1 */
+
+.project1 > .projectSmall {
+    display: none;
+}
+
+@media only screen and (min-width: 1000px) and (hover: hover) and (pointer: fine) {
+
+    .project:hover {
+        flex: 5;
+        width: 77.4rem;
+        height: 57.5rem;
+    }
+
+    .project:hover ~ .project1 {
+        flex: 0.5;  
+    }
+    
+    .project:hover ~ .project1 > .projectSmall {
+        display: block;
+    }
+    
+    .project:hover ~ .project1 > .projectWide {
+        display: none;
+    }
+}
+
+/* ----------------- */
+
+/* Hover Over Project To Change Itself */
+
+.project > .projectWide {
+    display: none;
+}
+
+@media only screen and (min-width: 1000px) and (hover: hover) and (pointer: fine) {
+    .project:hover > .projectWide {
+        display: block;
+    }
+    
+    .project:hover > .projectSmall {
+        display: none;
+    }
+ }
+
+/* --------------------- */
+
+.projectInfo {
+    position: absolute;
+    bottom: 3rem;
+    padding-inline: 3rem;
+    width: 100%;
+}
+
+.projectName {
+    font-family: var(--main-font-family );
+    color: var(--secondary-color);
+    font-style: normal;
+    font-weight: 656;
+    font-size: 3.2rem;
+    line-height: 3.8rem;
+}
+
+.projectDescription {
+    font-family: var(--main-font-family );
+    color: var(--secondary-color);
+    font-style: normal;
+    font-weight: 457;
+    font-size: 2rem;
+    line-height: 2.9rem;
+}
+
+@media only screen and (max-width: 1000px) {
+    .projectsContainer {
+        flex-direction: column-reverse;
+        padding: 0;
+        height: fit-content;
+    }
+
+    .projectsContainer > * {
+        margin-top: 3rem;
+        margin-inline: 0;
+    }
+
+    .project {
+        width: 100%;
+        flex: 0 1 auto;
+        height: 30rem;
+    }
+    .project1 {
+        width: 100%;
+        flex: 0 1 auto;
+        height: 30rem;
+    }
+
+    .project1 > .projectWide {
+        display: block;
+    }
+
+    .project1 > .projectSmall {
+        display: none;
+    }
+
+    .project > .projectWide {
+        display: block;
+    }
+
+    .project > .projectSmall {
+        display: none;
+    }
+
+    .projectInfo {
+        bottom: 0.5rem;
+        padding-inline: 0;
+        padding: 0;
+        text-align: center;
+    }
+
+    .projectInfo img {
+        display: none;
+    }
+
+    .logoImageOnMobile {
+        z-index: 5;
+        display: block;
+        position: absolute;
+        top: -2rem;
+        left: -2rem;
+    }
+}
+
+/*  */

@@ -7,14 +7,18 @@
     color: var(--primary-color);
     font-style: normal;
     font-weight: 556;
-    font-size: 7rem;
-    line-height: 8.4rem;
+    font-size: 6rem;
+    line-height: 5rem;
     text-align: center;
 }
 
 @media only screen and (max-width: 1000px) {
     .mainText > * {
-        font-size: 5rem;
+        font-size: 3.5rem;
+    }
+
+    .mainText {
+        width: 100%;
     }
 }
 
@@ -32,12 +36,251 @@
     border: none;
 }
 
+/* Step Loading Bar */
+
 .progressBarContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-block: 4rem;
-    background: linear-gradient(106.41deg, rgba(255, 255, 255, 0.4) 7.3%, rgba(255, 255, 255, 0.1) 100%);
-    box-shadow: 0rem 0.4rem 2.4rem -0.1rem rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(4rem);
+    background: var(--main-div-background);
+    box-shadow: var(--main-div-box-shadow);
+    backdrop-filter: var(--main-backdrop-filter);
     border-radius: 1.5rem;
     width: 100%;
     height: 10rem;
+    padding-inline: 5rem;
 }
+
+@media only screen and (max-width: 800px) {
+    .progressBarContainer {
+        padding-inline: 1rem;
+    }
+}
+
+
+.step1, .step2, .step3, .step4 {
+    width: 13.9rem;
+    height: 4.1rem;
+    background: rgba(42, 37, 54, 0.1);
+    border-radius: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--main-font-family);
+    color: var(--primary-color);
+    font-style: normal;
+    font-weight: 350;
+    font-size: 1.5rem;
+    line-height: 2.4rem;
+}
+
+.line1, .line2, .line3 {
+    width: 200px;
+    height: 0px;
+    border: 2px solid #FFFFFF;
+}
+
+@keyframes animateStep1 {
+    to {
+        background-color: #f7e9a2;
+        color: black;
+    }
+}
+
+@keyframes animateStep2 {
+    to {
+        background: #2a2536;
+    }
+}
+
+@keyframes animateStep3 {
+    to {
+        background: #69a5dc;
+    }
+}
+@keyframes animateStep4 {
+    to {
+        background: rgba(0,231,23,.5);
+    }
+}
+
+@keyframes animateLine {
+    to {
+        background-position: left bottom;
+        border: 0.2rem solid black;
+    }
+}
+
+.step1 {
+    transition: 
+        all 1.2s,
+        border 0.5s 1.2s,
+        box-shadow 0.3s 1.5s
+    ;
+    animation: animateStep1 0.1s forwards;
+    animation-duration: 2s;
+}
+
+.line1 {
+    background: linear-gradient(to right, black 50%, white 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: linear .5s linear;
+    animation: animateLine 3s forwards;
+}
+
+.step2 {
+    transition: 
+        all 1.2s,
+        border 0.5s 1.2s,
+        box-shadow 0.3s 1.5s;
+    animation: animateStep2 0.1s forwards;
+    animation-duration: 2s;
+    animation-delay: 2.2s;
+}
+
+.line2 {
+    background: linear-gradient(to right, black 50%, white 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: linear .5s linear;
+    animation: animateLine 3s forwards;
+    animation-delay: 2.4s;
+}
+
+.step3 {
+    transition: 
+        all 1.2s,
+        border 0.5s 1.2s,
+        box-shadow 0.3s 1.5s;
+    animation: animateStep3 0.1s forwards;
+    animation-duration: 2s;
+    animation-delay: 5.2s;
+}
+
+.line3 {
+    background: linear-gradient(to right, black 50%, white 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: linear .5s linear;
+    animation: animateLine 3s forwards;
+    animation-delay: 5.4s;
+}
+
+.step4 {
+    transition: 
+        all 1.2s,
+        border 0.5s 1.2s,
+        box-shadow 0.3s 1.5s;
+    animation: animateStep4 0.1s forwards;
+    animation-duration: 2s;
+    animation-delay: 8s;
+}
+
+@media only screen and (max-width: 1000px) {
+    .step1 {
+        display: none;
+    }
+    .line1 {
+        display: none;
+    }
+    .step2 {
+        animation-delay: 0s;
+        padding: 1rem;
+    }
+    .line2 {
+        animation-delay: 1s;
+    }
+    .step3 {
+        animation-delay: 3.2s;
+        padding: 1rem;
+    }
+    .line3 {
+        animation-delay: 4s;
+    }
+    .step4 {
+        animation-delay: 6.2s;
+        padding: 1rem;
+    }
+}
+
+/*  */
+
+.animatedTextContainer {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.text1 {
+    position: absolute;
+    font-style: normal;
+    font-family: var(--main-font-family);
+    color: var(--primary-color);
+    font-weight: 790;
+    font-size: 8rem;
+    line-height: 9.5rem;
+}
+
+.text2 {
+    position: absolute;
+    opacity: 0;
+    font-style: normal;
+    font-family: var(--main-font-family);
+    color: var(--primary-color);
+    font-weight: 790;
+    font-size: 8rem;
+    line-height: 9.5rem;
+}
+
+.text3 {
+    position: absolute;
+    opacity: 0;
+    font-style: normal;
+    font-family: var(--main-font-family);
+    color: var(--primary-color);
+    font-weight: 790;
+    font-size: 8rem;
+    line-height: 9.5rem;
+}
+
+@media only screen and (max-width: 1000px) {
+    .text1,
+    .text2,
+    .text3 {
+        font-size: 4rem;
+        line-height: 5rem;
+    }
+} 
+
+/* Team */
+
+.team {
+    margin-top: 3rem;
+}
+
+.teamSection {
+    height: 50rem;
+    width: 500%;
+    display: flex;
+}
+
+.teamContainer {
+    display: flex;
+    width: 100%;
+    height: 50rem;
+    outline: auto;
+}
+
+.teamCard {
+    width: 40rem;
+    height: 47rem;
+    background-color: red;
+    margin-inline: 5rem;
+}
+
+/*  */

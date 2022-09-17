@@ -3,6 +3,9 @@
     --primary-color: #FFFFFF;
     --secondary-color: #363131;
     --purple-color: #AE6EAA;
+    --main-div-background: linear-gradient(106.41deg, rgba(255, 255, 255, 0.4) 7.3%, rgba(255, 255, 255, 0.1) 100%);
+    --main-div-box-shadow: 0rem 0.4rem 2.4rem -0.1rem rgba(0, 0, 0, 0.3);
+    --main-backdrop-filter: blur(4rem);
 }
 
 html {
@@ -11,11 +14,107 @@ html {
 
 body {
     background: linear-gradient(90deg,#4f627d,#9e679b);
+    overflow-x: hidden;
 }
 
 .centerItemsInside {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.titleLine {
+    width: 90%;
+    height: 0rem;
+    border: 0.3rem solid var(--primary-color);
+    margin-top: 3rem;
+}
+
+.titleText {
+    font-family: var(--main-font-family);
+    color: var(--primary-color);
+    font-style: normal;
+    font-weight: 656;
+    font-size: 6rem;
+    line-height: 7.2rem;
+    text-align: center;
+}
+
+@media only screen and (max-width: 1000px) {
+    .titleText {
+        font-size: 3.5rem;
+        line-height: 4rem;
+    }
+}
+
+/* global-div background animation */
+
+@keyframes global-div-background-animation {
+    0% {
+        background-position: left;
+    }
+    100% {
+        background-position: right;
+    }
+}
+
+/*  */
+
+.global-div {
+    background: var(--main-div-background);
+    box-shadow: var(--main-div-box-shadow);
+    backdrop-filter: var(--main-backdrop-filter);
+    border-radius: 1.5rem;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
+    padding-inline: 15%;
+}
+
+.global-div:hover {
+    background-image: linear-gradient(45deg, rgba(185,109,175,1) 0%, rgba(235,218,152,1) 61%, rgba(51,74,126,1) 94%, rgba(18,28,88,1) 100%);
+    background-size: 400%;
+    animation: global-div-background-animation 5s infinite alternate;
+}
+
+.global-div h3 {
+    font-family: var(--main-font-family);
+    font-style: normal;
+    font-weight: 556;
+    font-size: 3.6rem;
+    line-height: 4.3rem;
+    text-align: center;
+    color: var(--primary-color);
+    width: 100%;
+}
+
+.global-div p {
+    font-style: normal;
+    font-weight: 350;
+    font-size: 2rem;
+    line-height: 2.4rem;
+    text-align: center;
+    font-family: var(--main-font-family);
+    color: var(--primary-color);
+}
+
+.global-div img {
+    width: 8rem;
+}
+
+@media only screen and (max-width: 1000px) {
+    .global-div {
+        height: fit-content;
+        padding-block: 15rem;
+        padding-inline: 0;
+    }
+    .global-div h3 {
+        font-size: 3rem;
+        line-height: 3.5rem;
+    }
+    .global-div p {
+        font-size: 2rem;
+    }
 }

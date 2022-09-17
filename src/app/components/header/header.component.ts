@@ -7,7 +7,7 @@ import { Component, OnInit, HostListener } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  public navbarCollapsed = false;
+  public navbarCollapsed = true;
 
   scrolled: boolean = false;
 

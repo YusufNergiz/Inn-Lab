@@ -1,0 +1,108 @@
+footer {
+    margin-top: 20rem;
+    border-top: 2px solid var(--primary-color);
+    height: 33.4rem;
+}
+
+.footerLink {
+    padding: 8rem;
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    flex-direction: column;
+}
+
+.footerLink > * {
+    padding-block: 0.8rem;
+}
+
+.footerLink h5 {
+    font-family: var(--main-font-family);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 2.1rem;
+    color: #FFD2DD;
+}
+
+.footerLink a {
+    font-family: var(--main-font-family);
+    color: var(--primary-color);
+    font-style: normal;
+    font-weight: 350;
+    font-size: 1.6rem;
+    line-height: 1.5rem;
+    text-decoration: none;
+}
+
+.footerLink p {
+    font-family: var(--main-font-family);
+    color: var(--primary-color);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 2.2rem;
+    padding-top: 5rem;
+}
+
+.footerContact {
+    padding: 5rem;
+}
+
+.footerContact h2 {
+    font-family: var(--main-font-family);
+    color: var(--primary-color);
+    font-style: normal;
+    font-weight: 556;
+    font-size: 3.2rem;
+    line-height: 3.8rem;
+}
+
+.footerContact input {
+    height: 4rem;
+    width: 26.7rem;
+    background-color: transparent;
+    outline: 0;
+    border: none;
+    border-bottom: 1px solid var(--primary-color);
+    font-family: var(--main-font-family);
+    color: white;
+    font-style: normal;
+    font-weight: 457;
+    font-size: 2rem;
+    line-height: 2.4rem;
+}
+
+.footerContact input::placeholder {
+    font-family: var(--main-font-family);
+    color: white;
+    font-style: normal;
+    font-weight: 457;
+    font-size: 2rem;
+    line-height: 2.4rem;
+}
+
+.footerContact button {
+    margin-top: 3rem;
+    width: 16.1rem;
+    height: 5.6rem;
+    background: var(--primary-color);
+    border-radius: 1.5rem;
+    font-family: var(--main-font-family);
+    font-style: normal;
+    font-weight: 656;
+    font-size: 2.4rem;
+    line-height: 2.9rem;
+    color: #AE6EAA;
+    border: none;
+}
+
+.footerContact > * {
+    padding-block: 1.2rem;
+}
+
+@media only screen and (max-width: 1000px) {
+    .footerLink {
+        padding-block: 1rem;
+    }
+}
