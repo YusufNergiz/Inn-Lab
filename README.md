@@ -1,3 +1,6 @@
 # A Landing Page of a Software Company
 
-https://github.com/YusufNergiz/Inn-Lab/blob/ace1c880d99a1eb87ccf8f7e29198d870c462f47/Videos/2023-02-11%2023-01-31.mkv
+
+
+https://user-images.githubusercontent.com/80420105/218283469-fbb71f2f-32da-4d99-85ba-892e70256f6b.mp4
+
